@@ -21,7 +21,7 @@ resource "null_resource" "docker_installer" {
 
 module "chef_docker" {
   source  = "app.terraform.io/Darnold-WalMart_Demo/chef-docker/packer"
-  version = "1.2.7"
+  version = "2.0.0"
 
   chef_env = "_default"
   docker_cmd = "${var.docker_cmd}"
