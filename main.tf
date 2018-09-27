@@ -34,3 +34,14 @@ module "chef_docker" {
   vault_chef_credentials_path = "secret/credentials/chef"
   source_image = "ubuntu"
 }
+
+	
+output "service_version" {
+  value = "${var.service_version}"
+}
+	
+output "service_name" {
+  value = "${var.service_name}"
+}
+
+	
