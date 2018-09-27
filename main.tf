@@ -15,6 +15,14 @@ variable "repo" {
 
 //--------------------------------------------------------------------
 // Modules
+
+resource "null_resource" "docker_installer" {
+	provisioner "local-exec" {
+    command = "bash ${path.module}/templates/docker_installer.sh"
+  }
+}
+
+
 module "chef_docker" {
   source  = "app.terraform.io/Darnold-WalMart_Demo/chef-docker/packer"
   version = "1.2.7"
